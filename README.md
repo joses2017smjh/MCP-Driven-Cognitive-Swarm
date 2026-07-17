@@ -148,6 +148,13 @@ Key environment knobs: `EV_THRESHOLD`, `GATEWAY_API_KEY`, `AGENT_RUNNER=mcp`, `M
   },
   "knockout": { "advance": { "home": 0.65, "away": 0.35 } },
   "player_props": { "home": [ {"player": "…", "p_anytime_scorer": 0.42} ] },
+  "headline_scenario": {                     // the most likely single story
+    "scoreline": "1-0", "probability": 0.15,
+    "goals": [ {"minute": 53, "team": "home", "scorer": "Bukayo Saka",
+                "assist": "Martin Odegaard"} ],
+    "player_of_the_match": "Martin Odegaard"
+    // drawn knockout scorelines add: "penalties": {"winner": "home", "p_advance": 0.65}
+  },
   "suggestions": [ {
     "market": "h2h", "selection": "away", "edge": 0.136, "ev": 1.077,
     "kelly_stake": 0.035, "tier": "low",
@@ -157,7 +164,13 @@ Key environment knobs: `EV_THRESHOLD`, `GATEWAY_API_KEY`, `AGENT_RUNNER=mcp`, `M
 }
 ```
 
-The synthesized answer surfaces the uncertainty verbatim: *"at 90% coverage the model cannot separate [home, draw] — treat this as a genuinely open match, not a pick."*
+The synthesized answer surfaces the uncertainty verbatim: *"at 90% coverage the model cannot separate [home, draw] — treat this as a genuinely open match, not a pick."* — and renders the headline scenario match-report style:
+
+> **Headline scenario — most likely single outcome (15%): ARS 1-0 MCI**
+> 53' – Bukayo Saka (ARS), assisted by Martin Odegaard
+> Player of the Match: Martin Odegaard
+
+Every element is the mode of its own model layer (scoreline grid, goal-time CDF, prop allocation) with its probability attached — a narrative over the distributions, never a replacement for them.
 
 ## 🛰️ The Three MCP Servers
 

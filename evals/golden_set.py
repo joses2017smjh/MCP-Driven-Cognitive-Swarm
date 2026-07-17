@@ -21,7 +21,8 @@ from dataclasses import dataclass, field
 
 FULL_TOOLSET = {
     "get_fixture_context", "get_live_odds", "get_team_stats",
-    "get_availability_report", "analyze_team_sentiment", "predict_match",
+    "get_squad_props", "get_availability_report", "analyze_team_sentiment",
+    "predict_match",
 }
 
 

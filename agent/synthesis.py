@@ -71,6 +71,27 @@ def render_answer(state: AgentState) -> str:
         f"no goals {_pct(fs['no_goals'])}."
     )
 
+    if scenario := pred.get("headline_scenario"):
+        team_of = {"home": req.home_team, "away": req.away_team}
+        gh, ga = scenario["scoreline"].split("-")
+        head = f"{req.home_team} {gh}-{ga} {req.away_team}"
+        if pens := scenario.get("penalties"):
+            head += (f" ({team_of[pens['winner']]} win on penalties — "
+                     f"{_pct(pens['p_advance'])} to advance)")
+        lines.append("")
+        lines.append(
+            f"Headline scenario — most likely single outcome "
+            f"({_pct(scenario['probability'])}): **{head}**"
+        )
+        for g in scenario["goals"]:
+            who = g.get("scorer", "goal")
+            line = f"  {g['minute']}' – {who} ({team_of[g['team']]})"
+            if g.get("assist"):
+                line += f", assisted by {g['assist']}"
+            lines.append(line)
+        if potm := scenario.get("player_of_the_match"):
+            lines.append(f"  Player of the Match: {potm}")
+
     if "knockout" in pred:
         adv = pred["knockout"]["advance"]
         lines.append(

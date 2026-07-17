@@ -54,19 +54,19 @@ def build_graph(runner: ToolRunner, *, ev_threshold: float = 0.03,
                         match_id=req.match_id)
         odds = _call(state, "sports-data", "get_live_odds",
                      match_id=req.match_id, market="h2h")
-        stats = {
-            side: _call(state, "sports-data", "get_team_stats",
-                        team_id=team, window=10)
-            for side, team in (("home", req.home_team), ("away", req.away_team))
-        }
         evidence = dict(state.evidence)
         if fixture.ok:
             evidence["fixture"] = fixture.result
         if odds.ok:
             evidence["odds"] = odds.result
-        for side, call in stats.items():
-            if call.ok:
-                evidence[f"stats_{side}"] = call.result
+        for side, team in (("home", req.home_team), ("away", req.away_team)):
+            stats = _call(state, "sports-data", "get_team_stats",
+                          team_id=team, window=10)
+            if stats.ok:
+                evidence[f"stats_{side}"] = stats.result
+            squad = _call(state, "sports-data", "get_squad_props", team_id=team)
+            if squad.ok:
+                evidence[f"squad_{side}"] = squad.result
         return {"evidence": evidence, "ledger": state.ledger,
                 "degraded": state.degraded}
 
@@ -104,6 +104,18 @@ def build_graph(runner: ToolRunner, *, ev_threshold: float = 0.03,
             )
             senti = ev.get(f"sentiment_{side}")
             ctx[f"sentiment_{side}"] = senti["score"] if senti else 0.0
+
+            # squad shares × availability → the players list for prop allocation
+            squad = ev.get(f"squad_{side}")
+            if squad:
+                avail_pct = {
+                    p["player"]: p["availability_pct"]
+                    for p in (avail["players"] if avail else [])
+                }
+                ctx[f"players_{side}"] = [
+                    {**p, "availability": avail_pct.get(p["player"], 1.0)}
+                    for p in squad["players"]
+                ]
 
         odds = ev.get("odds")
         if odds:

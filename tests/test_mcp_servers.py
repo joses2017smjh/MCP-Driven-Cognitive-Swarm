@@ -169,7 +169,7 @@ def test_unknown_team_rejected() -> None:
 
 @pytest.mark.parametrize("srv,expected", [
     (data_srv.server, {"get_team_stats", "get_live_odds", "get_h2h",
-                       "get_fixture_context"}),
+                       "get_fixture_context", "get_squad_props"}),
     (ml_srv.server, {"predict_match", "explain_prediction", "get_model_card"}),
     (news_srv.server, {"get_availability_report", "analyze_team_sentiment"}),
 ])

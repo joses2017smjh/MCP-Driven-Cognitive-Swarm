@@ -67,6 +67,7 @@ class InProcessRunner:
             ("sports-data", "get_live_odds"): data._live_odds,
             ("sports-data", "get_h2h"): data._h2h,
             ("sports-data", "get_fixture_context"): data._fixture_context,
+            ("sports-data", "get_squad_props"): data._squad_props,
             ("news-sentiment", "get_availability_report"): news._availability,
             ("news-sentiment", "analyze_team_sentiment"): news._sentiment,
             ("ml-inference", "predict_match"): ml.run_predict,

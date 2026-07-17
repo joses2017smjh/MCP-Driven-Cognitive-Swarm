@@ -30,6 +30,69 @@ from src.models.score_grid import (
 from src.models.suggestions import Driver, MarketQuote, make_suggestions
 
 
+def _headline_scenario(
+    bundle: ArtifactBundle,
+    grid,
+    *,
+    props: dict[str, list[dict]] | None,
+    knockout: bool,
+    advance: dict[str, float] | None,
+) -> dict[str, Any]:
+    """The single most likely match story, presentation-ready:
+
+        1-1 (13% most likely scoreline) — home advance on penalties (65%)
+        29' scorer (home), assisted by ...  /  68' scorer (away), ...
+
+    Every element is the mode of its own model layer (scoreline grid, timing
+    CDF, player props), clearly labeled with its probability — a narrative
+    over the distributions, never a replacement for them.
+    """
+    top = top_scorelines(grid, n=1)[0]
+    goals_home, goals_away = (int(x) for x in top["score"].split("-"))
+
+    goals: list[dict[str, Any]] = []
+    for side, count in (("home", goals_home), ("away", goals_away)):
+        side_players = (props or {}).get(side) or []
+        for k in range(count):
+            entry: dict[str, Any] = {
+                "minute": round(bundle.timing.minute_quantile((k + 0.5) / count)),
+                "team": side,
+            }
+            if side_players:
+                scorer = side_players[min(k, len(side_players) - 1)]
+                entry["scorer"] = scorer["player"]
+                entry["p_scorer_anytime"] = scorer["p_anytime_scorer"]
+                others = [p for p in side_players if p["player"] != scorer["player"]]
+                if others:
+                    entry["assist"] = max(others, key=lambda p: p["p_assist"])["player"]
+            goals.append(entry)
+    goals.sort(key=lambda g: g["minute"])
+
+    scenario: dict[str, Any] = {
+        "scoreline": top["score"],
+        "probability": top["prob"],
+        "goals": goals,
+    }
+
+    winner_side: str | None = (
+        "home" if goals_home > goals_away
+        else "away" if goals_away > goals_home else None
+    )
+    if knockout and winner_side is None and advance:
+        winner_side = "home" if advance["home"] >= advance["away"] else "away"
+        scenario["penalties"] = {
+            "winner": winner_side, "p_advance": advance[winner_side]
+        }
+
+    pool = (props or {}).get(winner_side or "", []) or (
+        ((props or {}).get("home", []) + (props or {}).get("away", []))
+    )
+    if pool:
+        potm = max(pool, key=lambda p: p["goal_lambda"] + p["assist_lambda"])
+        scenario["player_of_the_match"] = potm["player"]
+    return scenario
+
+
 def compose_prediction(
     bundle: ArtifactBundle,
     features_row: pd.DataFrame,
@@ -98,6 +161,13 @@ def compose_prediction(
                  "goal_lambda", "assist_lambda"]
             ].to_dict(orient="records")
         result["player_props"] = props
+
+    result["headline_scenario"] = _headline_scenario(
+        bundle, grid,
+        props=result.get("player_props"),
+        knockout=knockout,
+        advance=result["knockout"]["advance"] if knockout else None,
+    )
 
     if quotes:
         # the model side of every quote comes from THIS prediction — callers

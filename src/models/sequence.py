@@ -103,6 +103,20 @@ class GoalTimingModel:
             for lbl, s in zip(BAND_LABELS, share)
         ]
 
+    def minute_quantile(self, q: float) -> float:
+        """Invert the goal-time CDF: the minute by which fraction ``q`` of
+        expected goals have arrived. Used to place scenario goals at
+        representative minutes (piecewise-uniform within bands)."""
+        widths = np.diff(BAND_EDGES).astype(float)
+        mass = self.band_multipliers * widths
+        cdf = np.cumsum(mass) / mass.sum()
+        q = float(np.clip(q, 0.0, 1.0))
+        band = min(int(np.searchsorted(cdf, q)), N_BANDS - 1)
+        prev = float(cdf[band - 1]) if band > 0 else 0.0
+        span = float(cdf[band]) - prev
+        frac = (q - prev) / span if span > 0 else 0.0
+        return float(BAND_EDGES[band] + frac * widths[band])
+
     def first_scorer(
         self, mu_home: float, mu_away: float, p_zero_zero: float
     ) -> dict[str, float]:

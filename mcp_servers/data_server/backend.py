@@ -23,6 +23,7 @@ class DataBackend(Protocol):
     def live_odds(self, match_id: str, market: str) -> dict[str, Any]: ...
     def h2h(self, team_a: str, team_b: str) -> dict[str, Any]: ...
     def fixture_context(self, match_id: str) -> dict[str, Any]: ...
+    def squad_props(self, team_id: str) -> dict[str, Any]: ...
 
 
 def _rng(*keys: str) -> np.random.Generator:
@@ -94,6 +95,34 @@ class DemoBackend:
             "team_a": team_a, "team_b": team_b, "meetings": n,
             "a_wins": a_wins, "draws": draws, "b_wins": n - a_wins - draws,
             "avg_total_goals": round(float(rng.uniform(1.8, 3.4)), 2),
+        }
+
+    def squad_props(self, team_id: str) -> dict[str, Any]:
+        """Historical per-player shares that drive the prop allocation."""
+        from mcp_servers.demo_data import DEMO_SQUADS
+
+        squad = DEMO_SQUADS.get(team_id)
+        if squad is None:
+            raise ValueError(
+                f"unknown team {team_id!r}; known: {sorted(DEMO_SQUADS)}"
+            )
+        rng = _rng("squad", team_id)
+        players = list(squad)
+        xg = rng.dirichlet(np.full(len(players), 1.4))
+        xa = rng.dirichlet(np.full(len(players), 1.4))
+        taker = int(rng.integers(0, len(players)))  # set-piece duty holder
+        return {
+            "team_id": team_id,
+            "players": [
+                {
+                    "player": p,
+                    "xg_share": round(float(xg[i]), 4),
+                    "xa_share": round(float(xa[i]), 4),
+                    "exp_minutes": int(rng.integers(75, 91)),
+                    "setpiece_mult": 1.2 if i == taker else 1.0,
+                }
+                for i, p in enumerate(players)
+            ],
         }
 
     def fixture_context(self, match_id: str) -> dict[str, Any]:

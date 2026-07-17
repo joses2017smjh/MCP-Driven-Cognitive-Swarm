@@ -57,11 +57,16 @@ def test_workflow_end_to_end() -> None:
     mo = state.prediction["match_outcome"]
     assert mo["home"] + mo["draw"] + mo["away"] == pytest.approx(1.0, abs=1e-6)
     assert state.stake_approval == "not_required"
-    assert len(state.ledger) >= 9  # fixture+odds+2 stats+4 news+predict
+    assert len(state.ledger) >= 11  # fixture+odds+2 stats+2 squads+4 news+predict
     assert all(c.ok for c in state.ledger)
     assert "ARS" in state.answer and "%" in state.answer
     # demo feed has Jesus out → availability must have reached the model
     assert state.evidence["availability_home"]["availability_index"] < 1.0
+    # squad props + availability produced a named headline scenario
+    assert "Headline scenario" in state.answer
+    scenario = state.prediction["headline_scenario"]
+    if scenario["goals"]:
+        assert all("scorer" in g for g in scenario["goals"])
 
 
 def test_hitl_interrupt_and_approval() -> None:

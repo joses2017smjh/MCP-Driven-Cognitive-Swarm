@@ -42,6 +42,11 @@ def _fixture_context(match_id: str) -> dict[str, Any]:
     return with_as_of(_backend.fixture_context(match_id))
 
 
+@ttl_cache(seconds=3600)
+def _squad_props(team_id: str) -> dict[str, Any]:
+    return with_as_of(_backend.squad_props(team_id))
+
+
 @server.tool()
 def get_team_stats(team_id: str, window: int = 10) -> dict[str, Any]:
     """Rolling recency-weighted form for one team over its last `window`
@@ -77,6 +82,16 @@ def get_fixture_context(match_id: str) -> dict[str, Any]:
     'dead_rubber'). Needed to decide whether knockout advancement
     probabilities apply and whether home advantage is reduced."""
     return _fixture_context(match_id)
+
+
+@server.tool()
+def get_squad_props(team_id: str) -> dict[str, Any]:
+    """Per-player historical shares for one team: xg_share and xa_share
+    (fraction of the team's xG/xA the player accounts for while on pitch),
+    projected minutes, and set-piece duty multiplier. Combine with the
+    availability report to build the players list for predict_match —
+    these shares are history, not availability."""
+    return _squad_props(team_id)
 
 
 if __name__ == "__main__":

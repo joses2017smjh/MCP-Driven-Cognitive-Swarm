@@ -35,18 +35,7 @@ _sentiment_model = LexiconSentiment()  # swap for TransformerSentiment in prod
 
 # ---------------------------------------------------------------- demo feed
 
-_DEMO_SQUADS: dict[str, dict[str, list[str]]] = {
-    "ARS": {"Bukayo Saka": ["Saka"], "Martin Odegaard": ["Odegaard"],
-            "Gabriel Jesus": ["Jesus"], "Declan Rice": ["Rice"]},
-    "MCI": {"Erling Haaland": ["Haaland"], "Phil Foden": ["Foden"],
-            "Rodri": [], "Kevin De Bruyne": ["De Bruyne", "KDB"]},
-    # quiet squads: known teams with no demo news feed (clean availability)
-    "LIV": {"Mohamed Salah": ["Salah"], "Virgil van Dijk": ["van Dijk"]},
-    "RMA": {"Vinicius Junior": ["Vinicius"], "Jude Bellingham": ["Bellingham"]},
-    "BAR": {"Lamine Yamal": ["Yamal"], "Pedri": []},
-    "BAY": {"Harry Kane": ["Kane"], "Jamal Musiala": ["Musiala"]},
-    "PSG": {"Ousmane Dembele": ["Dembele"], "Vitinha": []},
-}
+from mcp_servers.demo_data import DEMO_SQUADS as _DEMO_SQUADS  # noqa: E402
 _DEMO_XI: dict[str, list[str]] = {t: list(s) for t, s in _DEMO_SQUADS.items()}
 
 
