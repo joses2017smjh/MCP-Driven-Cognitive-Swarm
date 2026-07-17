@@ -112,6 +112,9 @@ def test_predict_match_full_payload(bundle: ArtifactBundle) -> None:
     assert mo["home"] + mo["draw"] + mo["away"] == pytest.approx(1.0, abs=1e-6)
     assert set(mo["conformal_set"]) <= {"home", "draw", "away"}
     assert result["exact_score"]["top_scorelines"][0]["prob"] > 0
+    sg = result["exact_score"]["scoreline_grid"]
+    assert len(sg["probs"]) == 6 and len(sg["probs"][0]) == 6
+    assert sum(map(sum, sg["probs"])) + sg["tail_mass"] == pytest.approx(1.0)
     fs = result["event_sequence"]["first_scorer"]
     assert sum(fs.values()) == pytest.approx(1.0, abs=1e-9)
     assert result["knockout"]["advance"]["home"] + result["knockout"]["advance"]["away"] == pytest.approx(1.0)

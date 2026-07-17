@@ -131,6 +131,13 @@ def compose_prediction(
             "over_under_2_5": over_under(grid, 2.5),
             "btts": btts(grid),
             "grid_outcome_probs": outcome_probs(grid),
+            # 6x6 grid for the UI heatmap; mass beyond 5 goals reported as tail
+            "scoreline_grid": {
+                "max_goals": 5,
+                "probs": [[float(grid[i, j]) for j in range(6)]
+                          for i in range(6)],
+                "tail_mass": float(1.0 - grid[:6, :6].sum()),
+            },
         },
         "event_sequence": {
             "first_scorer": bundle.timing.first_scorer(

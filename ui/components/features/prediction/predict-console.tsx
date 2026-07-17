@@ -10,11 +10,9 @@
  */
 
 import { useMemo, useState } from "react";
-import {
-  ConformalVisualizer,
-  HeadlineTimeline,
-  ScorelineHeatmap,
-} from "@/components/features/prediction/placeholders";
+import { ConformalVisualizer } from "@/components/features/prediction/conformal-visualizer";
+import { HeadlineTimeline } from "@/components/features/prediction/headline-timeline";
+import { ScorelineHeatmap } from "@/components/features/prediction/scoreline-heatmap";
 import { Badge, Panel, Skeleton, Stat } from "@/components/ui/panel";
 import { useCooldown, useDebounced } from "@/lib/hooks";
 import type { PredictResponse, Suggestion } from "@/lib/types";
@@ -210,10 +208,14 @@ export function PredictConsole() {
             />
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-3">
-            <ScorelineHeatmap
-              scorelines={result.prediction.exact_score.top_scorelines}
-            />
+          <div className="grid items-start gap-4 lg:grid-cols-3">
+            {result.prediction.exact_score.scoreline_grid ? (
+              <ScorelineHeatmap
+                grid={result.prediction.exact_score.scoreline_grid}
+                home={teams.home}
+                away={teams.away}
+              />
+            ) : null}
             <ConformalVisualizer
               outcome={result.prediction.match_outcome}
               home={teams.home}

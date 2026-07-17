@@ -13,11 +13,18 @@ export interface Scoreline {
   prob: number;
 }
 
+export interface ScorelineGrid {
+  max_goals: number;
+  probs: number[][]; // probs[home][away], 6x6
+  tail_mass: number;
+}
+
 export interface ExactScore {
   top_scorelines: Scoreline[];
   over_under_2_5: { over: number; under: number };
   btts: { yes: number; no: number };
   grid_outcome_probs: { home: number; draw: number; away: number };
+  scoreline_grid?: ScorelineGrid;
 }
 
 export interface FirstScorer {

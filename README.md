@@ -9,8 +9,12 @@ A two-phase, portfolio-grade system that predicts soccer tournament matches at f
 ![LangGraph](https://img.shields.io/badge/LangGraph-orchestration-1C3C3C)
 ![MCP](https://img.shields.io/badge/Model%20Context%20Protocol-FastMCP-6E56CF)
 ![FastAPI](https://img.shields.io/badge/FastAPI-gateway-009688?logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-15%20App%20Router-000000?logo=nextdotjs&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind-dark%20design%20system-06B6D4?logo=tailwindcss&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-compose-2496ED?logo=docker&logoColor=white)
-![pytest](https://img.shields.io/badge/pytest-99%20tests-0A9EDC?logo=pytest&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-112%20tests-0A9EDC?logo=pytest&logoColor=white)
+
+![MatchIntel UI](docs/img/ui-dashboard.png)
 
 ## 📑 Table of Contents
 
@@ -113,6 +117,26 @@ curl -s -X POST localhost:8000/approve -H 'Content-Type: application/json' \
 ```bash
 docker compose up --build
 ```
+
+**UI (Next.js dashboard):**
+
+```bash
+cd ui && npm install
+GATEWAY_URL=http://localhost:8000 npm run dev   # http://localhost:3000
+```
+
+The browser only ever talks to the UI's own `/api/*` Route Handlers, which
+attach `GATEWAY_URL`/`GATEWAY_API_KEY` server-side — the gateway origin and
+key never reach the client. Inputs are debounced (450 ms) and submissions
+pass a client-side cooldown mirroring the gateway rate limit. The dashboard
+renders the Dixon–Coles scoreline heatmap (ρ-corrected cells ringed, table
+view included), the conformal-set visualizer (set members bracketed under
+the coverage guarantee, excluded outcomes dimmed), the headline-scenario
+timeline (goal minutes, scorers, assists, penalties, Player of the Match),
+the HITL approval panel, and the full evidence trail. Chart colors were
+validated with a CVD/contrast palette validator against the app's dark
+surface (home/away poles ΔE 26.8 worst-case; draw is the neutral diverging
+midpoint and always direct-labeled).
 
 **Eval reports:**
 
