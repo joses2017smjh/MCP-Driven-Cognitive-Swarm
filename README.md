@@ -232,6 +232,20 @@ Trained and walked forward on **real matches and real closing odds** from footba
 
 **The closing line wins — reported, as promised.** The model beats the naive baseline on every metric in every fold and loses to the close in every fold: the market is the stronger forecaster, and this system's value is calibrated structure (consistent grids, uncertainty sets, availability propagation), not out-predicting Pinnacle. Empirical conformal coverage: **0.888 vs the 0.90 target** — mild undercoverage from temporal drift (teams change between seasons; exchangeability bends), reported rather than hidden. The suggestion layer settled at payable closing odds returns **−1.8% ROI over 1,795 flagged bets**: betting into the close with a close-anchored model doesn't clear the vig, exactly as theory predicts.
 
+### World Cup 2026 — predicting the live tournament (`python -m scripts.wc26_predict --ablate`)
+
+Trained on 8,946 internationals **strictly before the tournament** (zero leakage), then scored on the **102 real WC26 matches through the semifinals** (free ground truth: martj42/international_results). Full report: [docs/wc26_report.md](docs/wc26_report.md).
+
+| forecaster | log loss | Brier | accuracy |
+|---|---|---|---|
+| **model (pre-tournament train)** | **0.9013** | **0.5331** | **62.7%** |
+| train-frequency prior | 1.0552 | 0.6367 | 47.1% |
+| uniform | 1.0986 | 0.6667 | 47.1% |
+
+Here the model earns its keep (no betting market exists in this free source to beat), knockout accuracy hits 70%, and **conformal coverage holds at 0.951 vs the 0.90 target on real tournament data**. The forward forecast for the July 19 final — **Spain 56.5% to lift the trophy vs Argentina (incl. extra time/pens), modal score 1-1** — is on record in the report before the match; settle it via `/reflect` afterward.
+
+**Ablations** (same protocol per variant) quantify each source's contribution: removing team form collapses the model to the prior (log loss 0.9013 → 1.0522 — form is nearly the whole signal), recency decay and the 10-match window each add real value, while rest days and the neutral-venue flag are marginal *in this eval* (nearly every WC26 match is neutral, so the flag has no variance to exploit). The odds anchor, news/availability, and true xG cannot be ablated here because free international data doesn't carry them — the EPL backtest bounds the odds anchor's value, and agent-level source ablations (kill a server, re-run) live in `evals/` via `InProcessRunner(disabled=...)`.
+
 ### Agent evals (Phase B) — `evals/`
 
 **28-task golden set** across five categories (happy paths over many phrasings/teams, stakes-HITL, fault injection, prompt injection, unparseable), run in CI as a regression gate. Current results:
