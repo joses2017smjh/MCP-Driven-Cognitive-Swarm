@@ -1,0 +1,2148 @@
+{
+ "Argentina": [
+  {
+   "exp_minutes": 90,
+   "player": "Mar\u00eda Florencia Bonsegundo",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2868,
+   "xg_share": 0.1871
+  },
+  {
+   "exp_minutes": 90,
+   "player": "\u00c9rica Noelia Lonigro",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.2685
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Romina Stefania N\u00fa\u00f1ez",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2071,
+   "xg_share": 0.1558
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mariana Valeria Larroquette",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1914
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Eliana Noem\u00ed St\u00e1bile",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.3164,
+   "xg_share": 0.0067
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Estefan\u00eda Romina Banini Ruiz",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0174,
+   "xg_share": 0.0896
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Yamila Tamara Rodr\u00edguez",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1723,
+   "xg_share": 0.0191
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sophie Wais Braun",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0819
+  }
+ ],
+ "Australia": [
+  {
+   "exp_minutes": 90,
+   "player": "Mary Boio Fowler",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1306,
+   "xg_share": 0.2359
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Caitlin Jade Foord",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2567,
+   "xg_share": 0.1394
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Stephanie-Elise Catley",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1423,
+   "xg_share": 0.1715
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hayley Emma Raso",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0439,
+   "xg_share": 0.128
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Samantha May Kerr",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0231,
+   "xg_share": 0.1333
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Emily Louise van Egmond",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2091,
+   "xg_share": 0.048
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Katrina Gorry",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0753,
+   "xg_share": 0.083
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ellie Madison Carpenter",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1189,
+   "xg_share": 0.0609
+  }
+ ],
+ "Belgium": [
+  {
+   "exp_minutes": 90,
+   "player": "Tessa Wullaert",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.3979,
+   "xg_share": 0.2644
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Marie Detruyer",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.211,
+   "xg_share": 0.17
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mariam Abdulai Toloba",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0348,
+   "xg_share": 0.1567
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hannah Eurlings",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0551,
+   "xg_share": 0.1261
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Justine Vanhaevermaet",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0677,
+   "xg_share": 0.1156
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Janice Cayman",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1326
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jill Janssens",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1386,
+   "xg_share": 0.0346
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Laura Deloose",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0948,
+   "xg_share": 0.0
+  }
+ ],
+ "Brazil": [
+  {
+   "exp_minutes": 90,
+   "player": "Ariadina Alves Borges",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1738,
+   "xg_share": 0.2633
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Beatriz Zaneratto Jo\u00e3o",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1199,
+   "xg_share": 0.2706
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Adriana Leal da Silva",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.176,
+   "xg_share": 0.138
+  },
+  {
+   "exp_minutes": 90,
+   "player": "D\u00e9bora Cristiane de Oliveira",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1572,
+   "xg_share": 0.1178
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kerolin Nicoli Israel Ferraz",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1275,
+   "xg_share": 0.089
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Tamires C\u00e1ssia Dias de Britto",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1161,
+   "xg_share": 0.0381
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Geyse da Silva Ferreira",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0942,
+   "xg_share": 0.0292
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Marta Vieira da Silva Veiga",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0354,
+   "xg_share": 0.0539
+  }
+ ],
+ "Canada": [
+  {
+   "exp_minutes": 90,
+   "player": "Christine Margaret Sinclair",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0627,
+   "xg_share": 0.4143
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jordyn Pamela Huitema",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1016,
+   "xg_share": 0.2254
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sophie Schmidt",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.235,
+   "xg_share": 0.0451
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Vanessa Brigitte Gilles",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1905
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ashley Elizabeth Marie Lawrence",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2246,
+   "xg_share": 0.0048
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jessie Alexandra Fleming",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1957,
+   "xg_share": 0.0
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Evelyne Viens",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0405,
+   "xg_share": 0.1011
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kadeisha Buchanan",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1399,
+   "xg_share": 0.0187
+  }
+ ],
+ "China PR": [
+  {
+   "exp_minutes": 90,
+   "player": "Shuang Wang",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.7292
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Linyan Zhang",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0363,
+   "xg_share": 0.1459
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Xin Zhang",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.3824,
+   "xg_share": 0.0
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lina Yang",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0966,
+   "xg_share": 0.0479
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jiahui Lou",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1052,
+   "xg_share": 0.0378
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Yao Wei",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1552,
+   "xg_share": 0.0111
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Rui Zhang",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1002,
+   "xg_share": 0.0187
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mengwen Li",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1242,
+   "xg_share": 0.0095
+  }
+ ],
+ "Colombia": [
+  {
+   "exp_minutes": 90,
+   "player": "Mar\u00eda Catalina Usme Pineda",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.382,
+   "xg_share": 0.348
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Leicy Maria Santos Herrera",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1565,
+   "xg_share": 0.1855
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Linda Lizeth Caicedo Alegr\u00eda",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1628,
+   "xg_share": 0.0901
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mayra Tatiana Ram\u00edrez Ram\u00edrez",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0164,
+   "xg_share": 0.177
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Manuela Vanegas Cata\u00f1o",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0929,
+   "xg_share": 0.0519
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ana Mar\u00eda Guzm\u00e1n Zapata",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1528,
+   "xg_share": 0.0045
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Daniela Alexandra \u00c1rias Rojas",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0214,
+   "xg_share": 0.0781
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Daniela Montoya Quir\u00f3z",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0153,
+   "xg_share": 0.0648
+  }
+ ],
+ "Costa Rica": [
+  {
+   "exp_minutes": 90,
+   "player": "Valeria del Campo Guti\u00e9rrez",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.4127,
+   "xg_share": 0.1599
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Melissa Herrera Monge",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0586,
+   "xg_share": 0.4591
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Katherine Maria Alvarado Aguilar",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2545,
+   "xg_share": 0.0
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Fabiola Villalobos Morales",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0638,
+   "xg_share": 0.1361
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Raquel Rodriguez",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1494,
+   "xg_share": 0.0319
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mar\u00eda Paula Coto Gonz\u00e1lez",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1425
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mar\u00eda Paula Salas",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0609,
+   "xg_share": 0.0139
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sheika Daleicha Scott Richardson",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0565
+  }
+ ],
+ "Denmark": [
+  {
+   "exp_minutes": 90,
+   "player": "Janni Thomsen",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2109,
+   "xg_share": 0.3063
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Pernille Mosegaard Harder",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2857,
+   "xg_share": 0.2007
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Signe Kalles\u00f8e Bruun",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.2184
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Emma Snerle",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2056,
+   "xg_share": 0.0387
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sofie Bruun Bredgaard",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1362,
+   "xg_share": 0.0423
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Amalie J\u00f8rgensen Vangsgaard",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1201,
+   "xg_share": 0.0504
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sara Holmgaard",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0415,
+   "xg_share": 0.0722
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Nadia Nadim",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.071
+  }
+ ],
+ "England": [
+  {
+   "exp_minutes": 90,
+   "player": "Alessia Russo",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.185,
+   "xg_share": 0.177
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Chloe Kelly",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1764,
+   "xg_share": 0.1793
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ella Toone",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1787,
+   "xg_share": 0.1289
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lauren Hemp",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2053,
+   "xg_share": 0.0861
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Bethany Mead",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0872,
+   "xg_share": 0.1201
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lauren James",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0763,
+   "xg_share": 0.1191
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Alex Greenwood",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.044,
+   "xg_share": 0.1002
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Georgia Stanway",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0471,
+   "xg_share": 0.0893
+  }
+ ],
+ "France": [
+  {
+   "exp_minutes": 90,
+   "player": "Kadidiatou Diani",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2509,
+   "xg_share": 0.1289
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Onema Grace Geyoro",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1416,
+   "xg_share": 0.1665
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Marie-Antoinette Katoto",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0589,
+   "xg_share": 0.1959
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sakina Karchaoui",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1347,
+   "xg_share": 0.1634
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Delphine Cascarino",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2635,
+   "xg_share": 0.066
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sandy Baltimore",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1248,
+   "xg_share": 0.1082
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Oriane Jean-Fran\u00e7ois",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0227,
+   "xg_share": 0.0839
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Melvine Malard",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0029,
+   "xg_share": 0.0872
+  }
+ ],
+ "Germany": [
+  {
+   "exp_minutes": 90,
+   "player": "Klara B\u00fchl",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.4311,
+   "xg_share": 0.1872
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sjoeke N\u00fcsken",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0466,
+   "xg_share": 0.2879
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lea Sch\u00fcller",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0172,
+   "xg_share": 0.1461
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jule Brand",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2544,
+   "xg_share": 0.0707
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Linda Dallmann",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1109,
+   "xg_share": 0.0954
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ann-Katrin Berger",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1043,
+   "xg_share": 0.0673
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Rebecca Knaak",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0233,
+   "xg_share": 0.0745
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Janina Minge",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0121,
+   "xg_share": 0.0709
+  }
+ ],
+ "Haiti": [
+  {
+   "exp_minutes": 90,
+   "player": "N\u00e9rilia Mondesir",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.3359,
+   "xg_share": 0.1839
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Melchie Da\u00eblle Dumornay",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.3289,
+   "xg_share": 0.1683
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Batcheba Louis",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.2412
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Roseline \u00c9loissaint",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0565,
+   "xg_share": 0.1754
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Roselord Borgella",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0541,
+   "xg_share": 0.1683
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sherly Jeudy",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1603,
+   "xg_share": 0.0262
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Shwendesky Mac\u00e9lus Joseph",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0642,
+   "xg_share": 0.0
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Dougenie Tabita Kerbie Joseph",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0367
+  }
+ ],
+ "Iceland": [
+  {
+   "exp_minutes": 90,
+   "player": "Sveind\u00eds Jane J\u00f3nsd\u00f3ttir",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.7304,
+   "xg_share": 0.2185
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Gl\u00f3d\u00eds Perla Vigg\u00f3sd\u00f3ttir",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0689,
+   "xg_share": 0.3004
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sandra Mar\u00eda Jessen",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0349,
+   "xg_share": 0.149
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hl\u00edn Eir\u00edksd\u00f3ttir",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1224
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Katla Tryggvad\u00f3ttir",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.0915
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Alexandra J\u00f3hannsd\u00f3ttir",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.015,
+   "xg_share": 0.0623
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Dagn\u00fd Brynjarsd\u00f3ttir",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0817,
+   "xg_share": 0.0279
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kar\u00f3l\u00edna Lea Vilhj\u00e1lmsd\u00f3ttir",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0691,
+   "xg_share": 0.0279
+  }
+ ],
+ "Italy": [
+  {
+   "exp_minutes": 90,
+   "player": "Cristiana Girelli",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0202,
+   "xg_share": 0.4454
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Arianna Caruso",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1973,
+   "xg_share": 0.1093
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Emma Severini",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0879,
+   "xg_share": 0.1794
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sofia Cantore",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2715,
+   "xg_share": 0.0449
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Barbara Bonansea",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0589,
+   "xg_share": 0.1075
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Manuela Giugliano",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1838,
+   "xg_share": 0.0083
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Elisabetta Oliviero",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0518,
+   "xg_share": 0.0869
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lisa Boattin",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1287,
+   "xg_share": 0.0182
+  }
+ ],
+ "Jamaica": [
+  {
+   "exp_minutes": 90,
+   "player": "Jody Brown",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0899,
+   "xg_share": 0.3037
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Drew Spence",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1679,
+   "xg_share": 0.1821
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Trudi Sudan Carter",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2962,
+   "xg_share": 0.0968
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Atlanta Reigan Primus",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0829,
+   "xg_share": 0.1486
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Khadija Monifa Shaw",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0416,
+   "xg_share": 0.1458
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Deneisha Selena Blackwood",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1737,
+   "xg_share": 0.0153
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kayla McCoy",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0786,
+   "xg_share": 0.0521
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Tiffany Cameron",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0691,
+   "xg_share": 0.0558
+  }
+ ],
+ "Japan": [
+  {
+   "exp_minutes": 90,
+   "player": "Aoba Fujino",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.267,
+   "xg_share": 0.1741
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Riko Ueki",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0623,
+   "xg_share": 0.2687
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mina Tanaka",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1431,
+   "xg_share": 0.1603
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hinata Miyazawa",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0516,
+   "xg_share": 0.1947
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jun Endo",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.22,
+   "xg_share": 0.04
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Risa Shimizu",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1072,
+   "xg_share": 0.0622
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hikaru Naomoto",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0531,
+   "xg_share": 0.0714
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Yui Hasegawa",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0956,
+   "xg_share": 0.0287
+  }
+ ],
+ "Korea Republic": [
+  {
+   "exp_minutes": 90,
+   "player": "So-Yun Ji",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.4368,
+   "xg_share": 0.0707
+  },
+  {
+   "exp_minutes": 90,
+   "player": "So-Hyun Cho",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0378,
+   "xg_share": 0.2487
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Casey Yu-Jin Phair",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.2238
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hwa-Yeon Son",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1927
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Young-Ju Lee",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.336,
+   "xg_share": 0.0
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Eun-Sun Park",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1289
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Geum-Min Lee",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0414,
+   "xg_share": 0.1007
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Yu-Ri Choe",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.148,
+   "xg_share": 0.0346
+  }
+ ],
+ "Morocco": [
+  {
+   "exp_minutes": 90,
+   "player": "Ghizlane Chebbak",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.4083,
+   "xg_share": 0.3381
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Anissa Lahmari",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.2824
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Fatima Zahra Tagnaout",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.4776,
+   "xg_share": 0.0039
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Salma Amani",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1152
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Rosella Ayane",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1102
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ibtissam Jra\u00efdi",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0176,
+   "xg_share": 0.088
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sakina Ouzraoui Diki",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0567
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hanane A\u00eft El Haj",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0965,
+   "xg_share": 0.0054
+  }
+ ],
+ "Netherlands": [
+  {
+   "exp_minutes": 90,
+   "player": "Lineth Beerensteyn",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1095,
+   "xg_share": 0.4127
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Victoria Pelova",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2992,
+   "xg_share": 0.1576
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Danielle van de Donk",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1533,
+   "xg_share": 0.0807
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Vivianne Miedema",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1726,
+   "xg_share": 0.0448
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jill Roord",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1472
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Chasity Grant",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0945,
+   "xg_share": 0.0873
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Wieke Hendrikje Maria Kaptein",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0447,
+   "xg_share": 0.0697
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kerstin Yasmijn Casparij",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1262,
+   "xg_share": 0.0
+  }
+ ],
+ "New Zealand": [
+  {
+   "exp_minutes": 90,
+   "player": "Hannah Wilkinson",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0269,
+   "xg_share": 0.3228
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ria Percival",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1096,
+   "xg_share": 0.2772
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jacqueline Anne Hand",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.298,
+   "xg_share": 0.0963
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Catherine Joan Bott",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2037,
+   "xg_share": 0.067
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Katie Bowen",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1144,
+   "xg_share": 0.0679
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Indiah-Paige Janita Riley",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0236,
+   "xg_share": 0.0985
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Olivia Chance",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1936,
+   "xg_share": 0.0098
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Malia Grace Steinmetz",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0302,
+   "xg_share": 0.0604
+  }
+ ],
+ "Nigeria": [
+  {
+   "exp_minutes": 90,
+   "player": "Michelle Alozie",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1249,
+   "xg_share": 0.2018
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Rasheedat Busayo Ajibade",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0459,
+   "xg_share": 0.1778
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Christy Onyenaturuchi Ucheibe",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1442,
+   "xg_share": 0.1509
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Uchenna Kanu",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2163,
+   "xg_share": 0.0949
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ugochi Desire Oparanozie",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0326,
+   "xg_share": 0.1249
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Asisat Lamina Oshoala",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1248
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Antionette Oyedupe Payne",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.4245,
+   "xg_share": 0.0091
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Osinachi Marvis Ohale",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0117,
+   "xg_share": 0.1159
+  }
+ ],
+ "Norway": [
+  {
+   "exp_minutes": 90,
+   "player": "Ada Stolsmo Hegerberg",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0152,
+   "xg_share": 0.609
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Signe Gaupset",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.4605,
+   "xg_share": 0.0666
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Frida Maanum",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1003,
+   "xg_share": 0.1355
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Vilde B\u00f8e Risa",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2527,
+   "xg_share": 0.0167
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Caroline Graham Hansen",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0562,
+   "xg_share": 0.0563
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ingrid Syrstad Engen",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0735,
+   "xg_share": 0.0424
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Elisabeth Terland",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0416,
+   "xg_share": 0.0294
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Synne Jensen",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.0439
+  }
+ ],
+ "Panama": [
+  {
+   "exp_minutes": 90,
+   "player": "Yomira Tibisay Pinz\u00f3n R\u00edos",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.376
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Marta Alexandra Cox Villarreal",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.8115,
+   "xg_share": 0.1543
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lineth Cedeno",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.2468
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Riley Tanner Rintala",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0335,
+   "xg_share": 0.0984
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Emily Masiel Cede\u00f1o Coba",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.155,
+   "xg_share": 0.0394
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Wendy Yisbel Natis B\u00e1rcenas",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0452
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Schiandra Yael Gonz\u00e1lez Jurado",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0227
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Aldrith Ivana Quintero Humphries",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0172
+  }
+ ],
+ "Philippines": [
+  {
+   "exp_minutes": 90,
+   "player": "Katrina Jacqueline Rivera Guillou",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2588,
+   "xg_share": 0.2591
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sara Kristine Bantan Eggesvik",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.3877,
+   "xg_share": 0.0905
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jessika Rebecca Macayan Cowart",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2806,
+   "xg_share": 0.0991
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sarina Isabel Calpo Bolden",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.2842
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hali Moriah Candido Long",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.1139
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sofia Nicole Dador Harrison",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0806
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Carleigh Bennett Frilles",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0729,
+   "xg_share": 0.0216
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Angela Beard",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.051
+  }
+ ],
+ "Poland": [
+  {
+   "exp_minutes": 90,
+   "player": "Natalia Padilla-Bidas",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0787,
+   "xg_share": 0.4112
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ewa Pajor",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0493,
+   "xg_share": 0.3758
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Paulina Tomasiak",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.4182,
+   "xg_share": 0.0239
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ewelina Kamczyk",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2467,
+   "xg_share": 0.046
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Tanja Pawollek",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0494,
+   "xg_share": 0.0565
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Martyna Wiankowska",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.0805
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Adriana Achci\u0144ska",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0838,
+   "xg_share": 0.0061
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Dominika Grabowska",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0739,
+   "xg_share": 0.0
+  }
+ ],
+ "Portugal": [
+  {
+   "exp_minutes": 90,
+   "player": "Francisca Ramos Ribeiro Nazareth Sousa",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.4692,
+   "xg_share": 0.205
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ana Ines Palma Capeta",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0599,
+   "xg_share": 0.3178
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Diana Catarina Ribeiro Gomes",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0996,
+   "xg_share": 0.2064
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Andreia de Jesus Jacinto",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2247,
+   "xg_share": 0.0519
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Telma Raquel Velosa Encarna\u00e7\u00e3o",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1077
+  },
+  {
+   "exp_minutes": 90,
+   "player": "F\u00e1tima Alexandra Figueira Pinto",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1025
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Tatiana Vanessa Ferreira Pinto",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.078,
+   "xg_share": 0.0088
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Dolores Isabel Jacome Silva",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0686,
+   "xg_share": 0.0
+  }
+ ],
+ "Republic of Ireland": [
+  {
+   "exp_minutes": 90,
+   "player": "Kyra Carusa",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.13,
+   "xg_share": 0.4563
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Katie McCabe",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2367,
+   "xg_share": 0.1412
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Louise Quinn",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1295,
+   "xg_share": 0.0883
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Abbie Larkin",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2207,
+   "xg_share": 0.0273
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sinead Farrelly",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0603,
+   "xg_share": 0.0975
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Heather Payne",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0609,
+   "xg_share": 0.089
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Denise O'Sullivan",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0141,
+   "xg_share": 0.1005
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lucy Quinn",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1478,
+   "xg_share": 0.0
+  }
+ ],
+ "South Africa": [
+  {
+   "exp_minutes": 90,
+   "player": "Thembi Kgatlana",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2709,
+   "xg_share": 0.5124
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hildah Tholakele Magaia",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1616,
+   "xg_share": 0.1932
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Jermaine Seoposenwe",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.3251,
+   "xg_share": 0.0179
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Linda Maserame Motlhalo",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0324,
+   "xg_share": 0.2192
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kholosa Biyana",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1475,
+   "xg_share": 0.0227
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Bongeka Gamede",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0078,
+   "xg_share": 0.029
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Refiloe Jane",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0298,
+   "xg_share": 0.0016
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mapula Nomvula Kgoale",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0251,
+   "xg_share": 0.004
+  }
+ ],
+ "Spain": [
+  {
+   "exp_minutes": 90,
+   "player": "Mar\u00eda Francesca Caldentey Oliver",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1753,
+   "xg_share": 0.1764
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Alexia Putellas Segura",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2027,
+   "xg_share": 0.1562
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Esther Gonzalez Rodr\u00edguez",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0218,
+   "xg_share": 0.2486
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Aitana Bonmati Conca",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1461,
+   "xg_share": 0.108
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Claudia Pina Medina",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1734,
+   "xg_share": 0.0795
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Salma Paralluelo Ayingono",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.096,
+   "xg_share": 0.09
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Patricia Guijarro Guti\u00e9rrez",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0875,
+   "xg_share": 0.0806
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Victoria L\u00f3pez",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0973,
+   "xg_share": 0.0607
+  }
+ ],
+ "Sweden": [
+  {
+   "exp_minutes": 90,
+   "player": "Emma Stina Blackstenius",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.051,
+   "xg_share": 0.2987
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Johanna Rytting-Kaneryd",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.4514,
+   "xg_share": 0.0253
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kosovare Asllani",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2658,
+   "xg_share": 0.1003
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ingrid Filippa Angeldal",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.041,
+   "xg_share": 0.1583
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Gun Nathalie Bj\u00f6rn",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0661,
+   "xg_share": 0.1099
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Fridolina Rolf\u00f6",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1393
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Smilla Holmberg",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0579,
+   "xg_share": 0.0899
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Julia Zigiotti-Olme",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0669,
+   "xg_share": 0.0784
+  }
+ ],
+ "Switzerland": [
+  {
+   "exp_minutes": 90,
+   "player": "G\u00e9raldine Reuteler",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1518,
+   "xg_share": 0.2736
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Iman Beney",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1597,
+   "xg_share": 0.1744
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sydney Schertenleib",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.3035,
+   "xg_share": 0.0637
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Riola Xhemaili",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0147,
+   "xg_share": 0.2381
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Smilla Vallotto",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1903,
+   "xg_share": 0.0548
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Alayah Pilgrim",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1264
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Svenja F\u00f6lmli",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0857,
+   "xg_share": 0.0469
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Leila Wandeler",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0944,
+   "xg_share": 0.0222
+  }
+ ],
+ "United States": [
+  {
+   "exp_minutes": 90,
+   "player": "Alexandra Morgan Carrasco",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2349,
+   "xg_share": 0.2563
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Sophia Olivia Wilson",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.2134,
+   "xg_share": 0.1834
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lindsey Michelle Heaps",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0516,
+   "xg_share": 0.1752
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lynn Williams Biyendolo",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1102,
+   "xg_share": 0.0938
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Andi Sullivan",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1302,
+   "xg_share": 0.0861
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Megan Anna Rapinoe",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0678,
+   "xg_share": 0.1064
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Rosemary Kathleen Lavelle",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.192,
+   "xg_share": 0.0232
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kristie Mewis",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0756
+  }
+ ],
+ "Vietnam": [
+  {
+   "exp_minutes": 90,
+   "player": "B\u00edch Th\u00f9y Nguy\u1ec5n Th\u1ecb",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.5105
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Th\u1ecb Thanh Nh\u00e3 Nguy\u1ec5n",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.4118,
+   "xg_share": 0.0466
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Nh\u01b0 Hu\u1ef3nh",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.3348,
+   "xg_share": 0.0
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Th\u1ecb H\u1ea3i Linh Tr\u1ea7n",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.2513
+  },
+  {
+   "exp_minutes": 90,
+   "player": "H\u1ea3i Y\u1ebfn Ph\u1ea1m",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0389,
+   "xg_share": 0.1295
+  },
+  {
+   "exp_minutes": 90,
+   "player": "V\u1ea1n S\u1ef1 Ng\u00e2n Th\u1ecb",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1578,
+   "xg_share": 0.0
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Thu Tr\u1ea7n Th\u1ecb",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0621
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Thu Th\u1ea3o Tr\u1ea7n Th\u1ecb",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0568,
+   "xg_share": 0.0
+  }
+ ],
+ "WNT Finland": [
+  {
+   "exp_minutes": 90,
+   "player": "Natalia Kuikka",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0907,
+   "xg_share": 0.3489
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Eveliina Summanen",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.3712,
+   "xg_share": 0.0277
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ria \u00d6ling",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.1976,
+   "xg_share": 0.1131
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Saara Katariina Kosola",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1659
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Oona Sevenius",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.1633
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Oona Siren",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.2065,
+   "xg_share": 0.0207
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Linda S\u00e4llstr\u00f6m",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0428,
+   "xg_share": 0.1059
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Eva Nystr\u00f6m",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0913,
+   "xg_share": 0.0544
+  }
+ ],
+ "Wales W": [
+  {
+   "exp_minutes": 90,
+   "player": "Jessica Fishlock",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.3403,
+   "xg_share": 0.4085
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Ceri Holland",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.6168,
+   "xg_share": 0.0139
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hannah Cain",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.2785
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Josie Green",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.168
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Angharad James",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.0504
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lily Woodham",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0429,
+   "xg_share": 0.0157
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Kayleigh Anne Marie Barton",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.0358
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Rachel Rowe",
+   "source": "statsbomb:UEFA Women's Euro 2025",
+   "xa_share": 0.0,
+   "xg_share": 0.0292
+  }
+ ],
+ "Zambia W": [
+  {
+   "exp_minutes": 90,
+   "player": "Barbra Banda",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.5748,
+   "xg_share": 0.5004
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Racheal Kundananji",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1269,
+   "xg_share": 0.3464
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Avell Chitundu",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1229,
+   "xg_share": 0.0836
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Margaret Belemu",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.1074,
+   "xg_share": 0.0072
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Lushomo Mweemba",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0276
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Mary Wilombe",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0499,
+   "xg_share": 0.0
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Hellen Nga'ndwe Chanda",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0,
+   "xg_share": 0.0234
+  },
+  {
+   "exp_minutes": 90,
+   "player": "Martha Tembo",
+   "source": "statsbomb:Women's World Cup 2023",
+   "xa_share": 0.0181,
+   "xg_share": 0.0114
+  }
+ ]
+}

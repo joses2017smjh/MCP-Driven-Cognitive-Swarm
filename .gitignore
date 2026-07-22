@@ -1,7 +1,9 @@
 data/raw/*
 data/interim/*
 data/processed/*
-data/artifacts/
+# exclude artifact CONTENTS (not the directory) so the negation below works —
+# git cannot re-include a file whose parent directory is itself excluded
+data/artifacts/*
 # ship the small derived player-shares artifact (real StatsBomb-derived
 # xG/xA shares, ~48 KB) so named scorers work without re-downloading events
 !data/artifacts/player_shares.json
