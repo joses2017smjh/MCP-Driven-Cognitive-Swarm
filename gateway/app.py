@@ -151,9 +151,95 @@ def root() -> dict[str, Any]:
                 "on port 3000. Hitting this port in a browser is expected to "
                 "show JSON, not a page.",
         "endpoints": ["/health", "/predict", "/approve", "/predict/stream",
-                      "/reflect", "/calibration", "/bracket"],
+                      "/reflect", "/calibration", "/bracket", "/leagues",
+                      "/leagues/{id}", "/leagues/{id}/predict"],
         "interactive_api_docs": "/docs",
     }
+
+
+@app.get("/leagues")
+def leagues() -> dict[str, Any]:
+    """Directory of leagues (grouped by region) and tournament features. Fast:
+    catalog only — per-league stats load lazily via /leagues/{id}."""
+    from src.data.leagues import CATALOG
+
+    groups: dict[str, list[dict[str, str]]] = {}
+    for lg in CATALOG:
+        groups.setdefault(lg.region, []).append(
+            {"id": lg.id, "name": lg.name, "country": lg.country})
+    return {
+        "regions": [{"region": r, "leagues": lgs} for r, lgs in groups.items()],
+        "tournaments": [
+            {"id": "wwc", "name": "Women's World Cup (projection)",
+             "type": "bracket", "endpoint": "/bracket"},
+            {"id": "wc26", "name": "World Cup 2026 (played)", "type": "report"},
+        ],
+    }
+
+
+_league_cache: dict[str, Any] = {}
+
+
+def _league_data(league_id: str) -> dict[str, Any]:
+    if league_id not in _league_cache:
+        from src.data.leagues import build_ratings, get_league, load_results
+
+        lg = get_league(league_id)          # raises KeyError on unknown id
+        results = load_results(lg)
+        elo, rho = build_ratings(results)
+        _league_cache[league_id] = {"league": lg, "results": results,
+                                    "elo": elo, "rho": rho}
+    return _league_cache[league_id]
+
+
+@app.get("/leagues/{league_id}")
+def league_detail(league_id: str) -> dict[str, Any]:
+    """One league: standings table, in-league Elo, recent results, upcoming
+    fixtures (European where available), and the team list for matchups."""
+    from src.data.leagues import (
+        latest_season, recent_results, standings, upcoming_fixtures,
+    )
+
+    try:
+        d = _league_data(league_id)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except Exception as exc:  # noqa: BLE001 — offline / data unavailable
+        raise HTTPException(status_code=503, detail=f"league data unavailable: {exc}") from exc
+
+    lg, results, elo = d["league"], d["results"], d["elo"]
+    season = latest_season(results)
+    season_teams = (set(results[results["season"] == season]["home_team"])
+                    | set(results[results["season"] == season]["away_team"]))
+    elos = {t: round(elo.ratings.get(t, 1500.0), 1) for t in season_teams}
+    return {
+        "id": lg.id, "name": lg.name, "region": lg.region, "country": lg.country,
+        "season": season,
+        "standings": standings(results, season),
+        "elo": dict(sorted(elos.items(), key=lambda kv: -kv[1])),
+        "recent_results": recent_results(results, 12),
+        "upcoming_fixtures": (upcoming_fixtures(lg.code) if lg.source == "main"
+                              else []),
+        "teams": sorted(season_teams),
+        "note": ("Standings and results are real and current (days old for "
+                 "live seasons). 'Recent results' are the latest played "
+                 "matches; genuine forward fixtures come from the European "
+                 "fixtures feed where present, else pick two teams to project "
+                 "a matchup."),
+    }
+
+
+@app.get("/leagues/{league_id}/predict")
+def league_predict(league_id: str, home: str, away: str) -> dict[str, Any]:
+    """Model prediction for any two teams in the league (Elo engine): outcome,
+    scorelines, advancement, timing, role-level scorers/assists, evidence."""
+    from src.data.leagues import predict_matchup
+
+    try:
+        d = _league_data(league_id)
+        return predict_matchup(d["elo"], d["rho"], home, away)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
 
 
 _bracket_cache: dict[str, Any] | None = None

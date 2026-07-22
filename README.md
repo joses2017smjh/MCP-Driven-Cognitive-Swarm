@@ -14,7 +14,23 @@ A two-phase, portfolio-grade system that predicts soccer tournament matches at f
 ![Docker](https://img.shields.io/badge/Docker-compose-2496ED?logo=docker&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-112%20tests-0A9EDC?logo=pytest&logoColor=white)
 
-![MatchIntel UI](docs/img/ui-dashboard.png)
+![MatchIntel league hub](docs/img/ui-league-hub.png)
+
+The home page is a **league & tournament hub** — Liga MX and MLS (live seasons), the top-5 European leagues plus Eredivisie/Primeira, Argentina and Brazil, and the international tournaments. Click any league for standings, in-league Elo, the latest results, and a matchup projector; click any tie in the Women's World Cup bracket to drill into the data behind it.
+
+<details>
+<summary>More screens — league detail, bracket tree, agent console</summary>
+
+**League detail** (real Liga MX 2026/27 standings, Elo, latest results, matchup projector):
+![League detail](docs/img/ui-league-detail.png)
+
+**Women's World Cup bracket** (advance probabilities per tie, click any match to drill in):
+![Bracket](docs/img/ui-bracket.png)
+
+**Agent console** (`/predict`) — conformal uncertainty, market value, HITL approval, evidence trail:
+![Agent console](docs/img/ui-dashboard.png)
+
+</details>
 
 ## 📑 Table of Contents
 

@@ -121,3 +121,106 @@ export interface Health {
   ok: boolean;
   model_version: string | null;
 }
+
+// ---- leagues hub ----
+
+export interface LeagueRef {
+  id: string;
+  name: string;
+  country: string;
+}
+
+export interface LeagueDirectory {
+  regions: { region: string; leagues: LeagueRef[] }[];
+  tournaments: { id: string; name: string; type: string; endpoint?: string }[];
+}
+
+export interface StandingRow {
+  rank: number;
+  team: string;
+  played: number;
+  won: number;
+  drawn: number;
+  lost: number;
+  gf: number;
+  ga: number;
+  gd: number;
+  points: number;
+}
+
+export interface MatchResult {
+  date: string;
+  home_team: string;
+  away_team: string;
+  home_score: number;
+  away_score: number;
+}
+
+export interface UpcomingFixture {
+  date: string;
+  time: string;
+  home_team: string;
+  away_team: string;
+  odds_home?: number;
+  odds_draw?: number;
+  odds_away?: number;
+}
+
+export interface LeagueDetail {
+  id: string;
+  name: string;
+  region: string;
+  country: string;
+  season: string;
+  standings: StandingRow[];
+  elo: Record<string, number>;
+  recent_results: MatchResult[];
+  upcoming_fixtures: UpcomingFixture[];
+  teams: string[];
+  note: string;
+}
+
+// ---- bracket + matchup tie (shared shape from the Elo engine) ----
+
+export interface TieGoal {
+  minute: number;
+  team: "home" | "away";
+  scorer_role: string;
+  assist_role: string | null;
+}
+
+export interface Tie {
+  home: string;
+  away: string;
+  seeds?: { home: number; away: number };
+  expected_goals: { home: number; away: number };
+  outcome_90: { home: number; draw: number; away: number };
+  advance: Record<string, number>;
+  projected_winner: string;
+  top_scorelines: { score: string; prob: number }[];
+  first_scorer: { home_first: number; away_first: number; no_goals: number };
+  headline_scenario: {
+    scoreline: string;
+    probability: number;
+    goals: TieGoal[];
+    penalties: { winner: string; p_advance: number } | null;
+    note: string;
+  };
+  evidence: {
+    home_rating: { elo: number; matches: number; seed: number; last_played: string };
+    away_rating: { elo: number; matches: number; seed: number; last_played: string };
+    elo_difference: number;
+    model_xg: { home: number; away: number };
+    dixon_coles_rho: number;
+    method: string;
+  };
+}
+
+export interface Bracket {
+  tournament: string;
+  disclaimer: string;
+  seeding: { rank: number; team: string; elo: number; matches: number }[];
+  rounds: { round: string; matches: Tie[] }[];
+  champion: string;
+  model: Record<string, number | string>;
+}
