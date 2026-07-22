@@ -36,8 +36,19 @@ class SwarmMemory:
             return []
         return [json.loads(l) for l in self.insight_path.read_text().splitlines() if l]
 
+    # recall NEVER returns the whole file — it filters by concept and hard-caps
+    # to the k most recent matches, so what reaches the planner's context is
+    # bounded no matter how large the store grows. Migration threshold: when
+    # the store exceeds ~10k insights OR recall needs semantic (not
+    # substring) matching, swap this file backend for a local vector store
+    # (Chroma / LanceDB) behind this same recall/commit interface — the
+    # signatures are chosen so nothing upstream changes.
+    RECALL_CAP = 5
+
     def recall(self, concept: str, k: int = 3) -> list[str]:
-        """Insights whose concept key matches (substring), most recent first."""
+        """The <=k most recent insights whose concept key matches (substring).
+        Bounded by RECALL_CAP regardless of caller."""
+        k = min(k, self.RECALL_CAP)
         hits = [r for r in self._rows() if concept.lower() in r["concept"].lower()]
         return [r["insight"] for r in hits[-k:]]
 

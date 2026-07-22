@@ -151,9 +151,32 @@ def root() -> dict[str, Any]:
                 "on port 3000. Hitting this port in a browser is expected to "
                 "show JSON, not a page.",
         "endpoints": ["/health", "/predict", "/approve", "/predict/stream",
-                      "/reflect", "/calibration"],
+                      "/reflect", "/calibration", "/bracket"],
         "interactive_api_docs": "/docs",
     }
+
+
+_bracket_cache: dict[str, Any] | None = None
+
+
+@app.get("/bracket")
+def bracket(refresh: bool = False) -> dict[str, Any]:
+    """Women's World Cup bracket projection: seeded field (Elo), every tie's
+    outcome/advancement/scoreline/timing, role-level scorers+assists, and a
+    per-match `evidence` block to drill into what drove each decision.
+    Cached after first build (Elo over ~11k matches takes a few seconds)."""
+    global _bracket_cache
+    if _bracket_cache is None or refresh:
+        try:
+            from src.data.womens_international import fetch_results
+            from src.models.bracket import simulate_bracket
+
+            _bracket_cache = simulate_bracket(fetch_results())
+        except Exception as exc:  # noqa: BLE001 — offline / data unavailable
+            raise HTTPException(
+                status_code=503, detail=f"bracket data unavailable: {exc}"
+            ) from exc
+    return _bracket_cache
 
 
 @app.get("/health")

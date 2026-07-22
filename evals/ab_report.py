@@ -134,6 +134,14 @@ def render(arms: list[dict]) -> str:
 
     lines = [
         "# Workflow vs Swarm vs Agent — A/B report", "",
+        "> **Latency reality check.** The workflow and swarm arms run their "
+        "deterministic cores with **no LLM inference** — the millisecond "
+        "figures are orchestration + the deterministic MCP tool calls "
+        "(XGBoost, Dixon-Coles, Elo), not model-API round-trips. Enabling the "
+        "optional LLM planner/critic/synthesis (ANTHROPIC_API_KEY) adds "
+        "~0.5–2 s **per LLM call** — that cost is exactly what the react arm "
+        "measures and what this table exists to make explicit, never hide.",
+        "",
         "| metric | " + " | ".join(a["mode"] for a in arms) + " |",
         "|---|" + "---|" * len(arms),
     ]
