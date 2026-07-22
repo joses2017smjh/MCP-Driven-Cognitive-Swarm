@@ -2,6 +2,9 @@ data/raw/*
 data/interim/*
 data/processed/*
 data/artifacts/
+# ship the small derived player-shares artifact (real StatsBomb-derived
+# xG/xA shares, ~48 KB) so named scorers work without re-downloading events
+!data/artifacts/player_shares.json
 data/memory/
 data/traces/
 evals/out/

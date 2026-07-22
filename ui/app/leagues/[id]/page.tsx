@@ -134,7 +134,12 @@ export default function LeaguePage({ params }: { params: Promise<{ id: string }>
               {/* right rail: fixtures + latest games */}
               <div className="flex flex-col gap-4">
                 {data.upcoming_fixtures.length ? (
-                  <Panel title="Upcoming fixtures">
+                  <Panel title="Upcoming fixtures"
+                    right={data.fixtures_source ? (
+                      <span className="text-2xs normal-case text-ink-600">
+                        {data.fixtures_source}
+                      </span>
+                    ) : undefined}>
                     <ul className="flex flex-col gap-2">
                       {data.upcoming_fixtures.slice(0, 8).map((f, i) => (
                         <li key={i}>

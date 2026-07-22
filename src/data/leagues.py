@@ -214,6 +214,35 @@ def predict_matchup(elo, rho: float, home_team: str, away_team: str,
     return tie
 
 
+def fixtures_for(league: League) -> tuple[list[dict], str]:
+    """Upcoming fixtures for a league, best source first.
+
+    1. The Odds API when ODDS_API_KEY is set — genuine forward fixtures with
+       live odds for EVERY league (incl. Liga MX / MLS).
+    2. else football-data.co.uk `fixtures.csv` for main-section European
+       leagues (sparse in the off-season).
+    3. else empty — the UI then offers matchup projection instead of
+       pretending a schedule exists.
+
+    Returns (fixtures, source_label) so the UI can say where they came from.
+    """
+    from src.data.odds_api import OddsAPIClient, OddsAPIUnavailable
+
+    try:
+        client = OddsAPIClient()
+        fixtures = client.upcoming(league.id)
+        if fixtures:
+            return fixtures, "the-odds-api"
+    except (OddsAPIUnavailable, KeyError):
+        pass                                   # no key / unmapped: fall through
+    except Exception:                          # noqa: BLE001 — never break the page
+        pass
+
+    if league.source == "main":
+        return upcoming_fixtures(league.code), "football-data.co.uk"
+    return [], "none"
+
+
 def upcoming_fixtures(division_code: str, refresh: bool = False) -> list[dict]:
     """Upcoming fixtures for a MAIN-section league from fixtures.csv (with
     odds where present). Empty for new-section leagues and off-season."""

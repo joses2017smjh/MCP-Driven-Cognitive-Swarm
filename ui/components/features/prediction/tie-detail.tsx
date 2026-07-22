@@ -82,8 +82,17 @@ export function TieDetail({ tie, compact = false }: { tie: Tie; compact?: boolea
 
       {/* scenario: who scores, who assists, when */}
       <div className="rounded border border-line bg-surface-800/40 p-3">
-        <div className="mb-2 text-2xs font-semibold uppercase tracking-widest text-ink-600">
-          Projected scenario
+        <div className="mb-2 flex items-center justify-between gap-2">
+          <span className="text-2xs font-semibold uppercase tracking-widest text-ink-600">
+            Projected scenario
+          </span>
+          {sc.player_data ? (
+            <Badge tone={sc.player_data === "statsbomb" ? "pos" : "neutral"}>
+              {sc.player_data === "statsbomb"
+                ? "real players · StatsBomb"
+                : sc.player_data === "mixed" ? "partly named" : "role-level"}
+            </Badge>
+          ) : null}
         </div>
         {sc.goals.length ? (
           <ul className="flex flex-col gap-1">

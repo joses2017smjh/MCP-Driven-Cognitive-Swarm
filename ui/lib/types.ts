@@ -176,6 +176,7 @@ export interface LeagueDetail {
   elo: Record<string, number>;
   recent_results: MatchResult[];
   upcoming_fixtures: UpcomingFixture[];
+  fixtures_source?: string;
   teams: string[];
   note: string;
 }
@@ -204,6 +205,7 @@ export interface Tie {
     probability: number;
     goals: TieGoal[];
     penalties: { winner: string; p_advance: number } | null;
+    player_data?: "statsbomb" | "mixed" | "role-level";
     note: string;
   };
   evidence: {

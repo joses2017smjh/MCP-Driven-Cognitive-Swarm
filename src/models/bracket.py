@@ -78,14 +78,38 @@ def rank_teams(
     ]
 
 
+_SHARES_CACHE: dict[str, list[dict]] | None = None
+
+
+def _lineup_for(team: str) -> tuple[list[dict], bool]:
+    """Real StatsBomb player shares when we have them, else the role lineup.
+
+    Returns (lineup, is_named). Named players come from actual event data
+    (shot xG per player, key-pass xG for assists) — never invented.
+    """
+    global _SHARES_CACHE
+    if _SHARES_CACHE is None:
+        from src.data.statsbomb import load_shares
+
+        try:
+            _SHARES_CACHE = load_shares()
+        except Exception:  # noqa: BLE001
+            _SHARES_CACHE = {}
+    players = _SHARES_CACHE.get(team)
+    return (players, True) if players else (ROLE_LINEUP, False)
+
+
 def _scenario(mu_h: float, mu_a: float, grid, timing: GoalTimingModel,
               home: str, away: str, advance: dict) -> dict:
-    """Role-level headline scenario: scoreline, scorers, assists, minutes."""
+    """Headline scenario: scoreline, scorers, assists, minutes. Uses real
+    named players where StatsBomb open data covers the team."""
     top = top_scorelines(grid, n=1)[0]
     gh, ga = (int(x) for x in top["score"].split("-"))
+    lineups = {"home": _lineup_for(home), "away": _lineup_for(away)}
+    named = {side: flag for side, (_, flag) in lineups.items()}
     props = {
         side: allocate_player_props(pd.DataFrame(
-            [{**r, "availability": 1.0} for r in ROLE_LINEUP]), team_mu=mu)
+            [{**r, "availability": 1.0} for r in lineups[side][0]]), team_mu=mu)
         for side, mu in (("home", mu_h), ("away", mu_a))
     }
     goals = []
@@ -109,8 +133,15 @@ def _scenario(mu_h: float, mu_a: float, grid, timing: GoalTimingModel,
         "penalties": None if gh != ga else {
             "winner": home if winner == "home" else away,
             "p_advance": round(advance[winner], 3)},
-        "note": "scorers/assists are role-level (heuristic shares); supply a "
-                "women's player-event provider to name individuals",
+        "player_data": ("statsbomb" if all(named.values())
+                        else "mixed" if any(named.values()) else "role-level"),
+        "note": (
+            "scorers/assists from real StatsBomb event data (per-player shot "
+            "xG and key-pass xG)"
+            if all(named.values()) else
+            "scorers/assists are role-level where no player-event data covers "
+            "the team; named players come from real StatsBomb event data"
+        ),
     }
 
 

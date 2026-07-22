@@ -265,7 +265,20 @@ Here the model earns its keep (no betting market exists in this free source to b
 
 ### Women's World Cup — full bracket projection (`python -m scripts.wwc_bracket`, or `GET /bracket`)
 
-Because the 2027 WWC draw doesn't exist yet, this is a **data-driven projection over a seeded field**, not a real fixture list. Team strength comes from **opponent-adjusted Elo** on ~11.6k real women's internationals (martj42, free) — the correct fix for strength-of-schedule, which a naive goal-difference ranking gets badly wrong (it seeded Puerto Rico #1 and Spain #14; Elo seeds Spain #1, USA #2, Germany, England, France, Brazil, Japan…). Each tie is simulated with the same Dixon–Coles machinery (Elo → calibrated goal supremacy → scoreline grid → extra-time/penalty advancement) and the goal-timing model, and every match carries a per-match **`evidence` block** (both teams' Elo, the xG the grid was built on, ρ) so you can drill into what drove each decision. Scorers, assists, and minutes are projected at the **role level** (striker/wingers/…) from team xG — naming individuals needs a women's player-event provider (StatsBomb open data covers several women's competitions). Current projection: **Spain over USA in the final**. Served cached at `GET /bracket`.
+Because the 2027 WWC draw doesn't exist yet, this is a **data-driven projection over a seeded field**, not a real fixture list. Team strength comes from **opponent-adjusted Elo** on ~11.6k real women's internationals (martj42, free) — the correct fix for strength-of-schedule, which a naive goal-difference ranking gets badly wrong (it seeded Puerto Rico #1 and Spain #14; Elo seeds Spain #1, USA #2, Germany, England, France, Brazil, Japan…). Each tie is simulated with the same Dixon–Coles machinery (Elo → calibrated goal supremacy → scoreline grid → extra-time/penalty advancement) and the goal-timing model, and every match carries a per-match **`evidence` block** (both teams' Elo, the xG the grid was built on, ρ) so you can drill into what drove each decision. Scorers, assists, and minutes come from **real named players** wherever StatsBomb Open Data covers the team (37 national teams: WWC 2019/2023 + Women's Euro 2022/2025), falling back to role level elsewhere. Current projection: **Spain over USA in the final**, e.g. *22' Esther González (Spain), assisted by Alexia Putellas · 45' Alex Morgan (USA), assisted by Sophia Wilson*. Served cached at `GET /bracket`.
+
+### Data sources — no scraping anywhere
+
+Every source is a licensed free API or a licensed bulk download:
+
+| Family | Provider | Key? | Status |
+|---|---|---|---|
+| League results, standings, closing odds | football-data.co.uk (main + "new" sections) | none | **live** — Liga MX, MLS, top-5 Europe, Eredivisie/Primeira, Argentina, Brazil |
+| International results (men's + women's) | martj42 open datasets | none | **live** — WC 2026, women's Elo + bracket |
+| Player events → **named** scorers/assists | **StatsBomb Open Data** (attribution required) | none | **live** — per-player shot xG and key-pass xG, 37 teams |
+| Upcoming fixtures + live odds | **The Odds API** (500 credits/mo free) | `ODDS_API_KEY` | **client built** — set the key and every league gets real fixtures + odds |
+
+Deliberately **not** used: FBref / Transfermarkt / ESPN scraping — fragile and ToS-restricted. (`soccerdata`, which scrapes FBref, is not on any active code path.)
 
 ### Agent evals (Phase B) — `evals/`
 

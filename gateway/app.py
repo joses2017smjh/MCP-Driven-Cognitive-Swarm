@@ -197,7 +197,7 @@ def league_detail(league_id: str) -> dict[str, Any]:
     """One league: standings table, in-league Elo, recent results, upcoming
     fixtures (European where available), and the team list for matchups."""
     from src.data.leagues import (
-        latest_season, recent_results, standings, upcoming_fixtures,
+        fixtures_for, latest_season, recent_results, standings,
     )
 
     try:
@@ -212,20 +212,21 @@ def league_detail(league_id: str) -> dict[str, Any]:
     season_teams = (set(results[results["season"] == season]["home_team"])
                     | set(results[results["season"] == season]["away_team"]))
     elos = {t: round(elo.ratings.get(t, 1500.0), 1) for t in season_teams}
+    fixtures, fixtures_source = fixtures_for(lg)
     return {
         "id": lg.id, "name": lg.name, "region": lg.region, "country": lg.country,
         "season": season,
         "standings": standings(results, season),
         "elo": dict(sorted(elos.items(), key=lambda kv: -kv[1])),
         "recent_results": recent_results(results, 12),
-        "upcoming_fixtures": (upcoming_fixtures(lg.code) if lg.source == "main"
-                              else []),
+        "upcoming_fixtures": fixtures,
+        "fixtures_source": fixtures_source,
         "teams": sorted(season_teams),
         "note": ("Standings and results are real and current (days old for "
-                 "live seasons). 'Recent results' are the latest played "
-                 "matches; genuine forward fixtures come from the European "
-                 "fixtures feed where present, else pick two teams to project "
-                 "a matchup."),
+                 "live seasons). Forward fixtures come from The Odds API when "
+                 "ODDS_API_KEY is set (all leagues, with live odds), else the "
+                 "European fixtures feed; without either, pick two teams to "
+                 "project a matchup."),
     }
 
 
