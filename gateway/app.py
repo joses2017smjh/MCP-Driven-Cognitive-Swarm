@@ -118,6 +118,21 @@ def _payload(result: dict[str, Any], thread_id: str) -> dict[str, Any]:
     }
 
 
+@app.get("/")
+def root() -> dict[str, Any]:
+    """Signpost: this is the API, not the website. The browser UI runs
+    separately (Next.js, default port 3000)."""
+    return {
+        "service": "soccer-prediction-gateway",
+        "note": "This is the backend API. The website (UI) runs separately "
+                "on port 3000. Hitting this port in a browser is expected to "
+                "show JSON, not a page.",
+        "endpoints": ["/health", "/predict", "/approve", "/predict/stream",
+                      "/reflect", "/calibration"],
+        "interactive_api_docs": "/docs",
+    }
+
+
 @app.get("/health")
 def health() -> dict[str, Any]:
     try:
