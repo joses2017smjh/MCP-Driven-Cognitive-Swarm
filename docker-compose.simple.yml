@@ -1,0 +1,27 @@
+# Minimal deploy: 2 services instead of 5.
+#
+# The gateway runs in AGENT_RUNNER=inprocess (the default): it calls all three
+# MCP servers' logic in-process rather than over HTTP, so you deploy ONE
+# backend container plus the UI. Use the full docker-compose.yml when you want
+# to demonstrate the distributed MCP-over-HTTP topology.
+#
+#   GATEWAY_API_KEY=$(openssl rand -hex 16) docker compose -f docker-compose.simple.yml up --build
+
+services:
+  gateway:
+    build: .
+    command: uvicorn gateway.app:app --host 0.0.0.0 --port 8000
+    environment:
+      AGENT_RUNNER: inprocess              # in-process MCP logic; one container
+      GATEWAY_API_KEY: ${GATEWAY_API_KEY:?set GATEWAY_API_KEY}
+      PREDICT_RATE_LIMIT: 5/minute
+      # ANTHROPIC_API_KEY: ...             # optional: enables ReAct mode + LLM judge
+    ports: ["8000:8000"]
+
+  ui:
+    build: ./ui
+    environment:
+      GATEWAY_URL: http://gateway:8000
+      GATEWAY_API_KEY: ${GATEWAY_API_KEY:?set GATEWAY_API_KEY}
+    ports: ["3000:3000"]
+    depends_on: [gateway]
