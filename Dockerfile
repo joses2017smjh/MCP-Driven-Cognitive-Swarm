@@ -10,6 +10,9 @@ COPY agent ./agent
 COPY gateway ./gateway
 COPY scripts ./scripts
 COPY configs ./configs
+# the derived StatsBomb player-shares artifact (~48 KB) — without it the
+# deployed API silently falls back to role-level players instead of names
+COPY data/artifacts/player_shares.json ./data/artifacts/
 
 RUN pip install --no-cache-dir -e . \
     langgraph langchain-mcp-adapters mcp fastapi uvicorn httpx

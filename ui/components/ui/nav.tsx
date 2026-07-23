@@ -13,10 +13,17 @@ const LINKS = [
 
 export function Nav() {
   const pathname = usePathname();
-  const { data: health } = useHealth();
+  const { data: health, isLoading } = useHealth();
   // mobile: logo + status on row one, links wrap onto row two.
   // desktop: logo and links left, status right.
-  const status = health?.ok ? (
+  // free-tier backends sleep when idle, so the first visit is a cold start,
+  // not a failure — showing "offline" there reads as broken when it isn't
+  const status = isLoading ? (
+    <Badge tone="neutral">
+      <span className="sm:hidden">waking…</span>
+      <span className="hidden sm:inline">waking the backend…</span>
+    </Badge>
+  ) : health?.ok ? (
     <Badge tone="pos">
       <span className="sm:hidden">live</span>
       <span className="hidden sm:inline">gateway up · {health.model_version}</span>

@@ -73,3 +73,30 @@ def expected_calibration_error(
 def conformal_coverage(sets: list[list[int]], y_idx: np.ndarray) -> float:
     """Fraction of outcomes inside their prediction set; report next to 1-α."""
     return float(np.mean([y in s for y, s in zip(y_idx, sets)]))
+
+
+def rolling_coverage(covered: np.ndarray, window: int = 100) -> np.ndarray:
+    """Trailing-window empirical coverage over a temporally ordered stream.
+
+    NaN until a full window accrues. The marginal average can sit at target
+    while whole seasons undercover — this is the statistic that exposes it,
+    and its minimum ("worst window") is the drift-robustness headline.
+    """
+    s = pd.Series(np.asarray(covered, dtype=float))
+    return s.rolling(window, min_periods=window).mean().to_numpy()
+
+
+def coverage_by_bin(
+    covered: np.ndarray, values: np.ndarray, bin_edges: list[float],
+    labels: list[str] | None = None,
+) -> pd.DataFrame:
+    """Conditional coverage sliced by a covariate (e.g. market favorite prob).
+
+    Marginal coverage guarantees say nothing per-slice; a method that hits
+    90% overall by overcovering heavy favorites and undercovering toss-ups
+    is worst exactly where the suggestion layer needs it most.
+    """
+    bins = pd.cut(values, bin_edges, labels=labels, include_lowest=True)
+    frame = pd.DataFrame({"bin": bins, "covered": np.asarray(covered, dtype=float)})
+    out = frame.groupby("bin", observed=True)["covered"].agg(["mean", "count"])
+    return out.rename(columns={"mean": "coverage", "count": "n"}).reset_index()

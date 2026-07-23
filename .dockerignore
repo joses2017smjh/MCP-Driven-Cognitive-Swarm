@@ -1,0 +1,32 @@
+# Without this, the build context is ~2.3 GB (a 1.4 GB .venv and 528 MB of
+# node_modules that the image never uses), which makes remote builds on
+# Render/Fly crawl or time out. Keep only what the Dockerfile COPYs.
+
+# local envs and build outputs
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# the UI is built by ui/Dockerfile, not this image
+ui/
+
+# caches re-fetched at runtime; keep ONLY the small derived shares artifact
+data/*
+!data/artifacts
+data/artifacts/*
+!data/artifacts/player_shares.json
+
+# repo furniture the runtime does not need
+.git/
+.github/
+docs/
+notebooks/
+tests/
+evals/out/
+runs/
+*.png
+.env
