@@ -101,15 +101,40 @@ measures. The A/B report now states this in a banner so "swarm is fast" can
 never be misread as "multi-agent-with-LLMs is fast."
 
 **2. The compute sandbox is the ML-inference server, not a stateful code
-env.** Correct, and it is a real limitation: the executor passes data to a
-pre-trained endpoint, so it cannot write *novel* Python to answer an
-unanticipated statistical query ("win rate in heavy rain by formation"). For
-the fixed prediction task this is the right, safe trade; for open-ended
-analysis it is not. The honest upgrade is a locked-down, ephemeral
-code-execution MCP server (sandboxed subprocess: no network/filesystem,
-resource + time limits, AST allow-list) that the executor drives with the
-fail-fast retry loop. That is scoped as the next increment, not silently
-claimed as done.
+env.** This was correct, and it is now **built** — see
+`mcp_servers/code_server/`. The swarm can write *novel* Python against the
+real datasets to answer a question no endpoint anticipates, via
+`run_python(code, session_id)`.
+
+- **Static layer** (`sandbox.py`): the code is parsed and walked before it
+  runs. Imports are allow-listed to scientific Python; `eval`/`exec`/
+  `open`/`__import__` are refused; and **all dunder attribute access** is
+  blocked, which closes the `().__class__.__mro__[1].__subclasses__()`
+  breakout family.
+- **Dynamic layer** (`runner.py`): a separate process with POSIX rlimits
+  (CPU seconds, address space, file size), sockets stubbed to raise,
+  restricted builtins, a wall-clock kill, and a *guarded* `__import__` that
+  re-enforces the allow-list at runtime — so the static layer is not a
+  single point of failure (there is a test that bypasses the AST check on
+  purpose to prove the runtime guard still holds).
+- **Statefulness** is deterministic **cell replay**: a session keeps the
+  cells that succeeded and re-runs them before each new cell. That gives
+  reproducible state without pickling a live interpreter across a trust
+  boundary. The cost is re-execution, so sessions are capped
+  (`MAX_CELLS_PER_SESSION`); failed cells are never recorded, so a broken
+  cell cannot poison the replay.
+- **Zero-hallucination math is preserved, not weakened**: the LLM still
+  never computes — it *writes* code, and the deterministic interpreter
+  produces every number, which the Critic can then re-verify.
+
+`tests/test_sandbox.py` runs 18 real escape attempts (os/subprocess/socket/
+urllib/pickle/ctypes/file-read/eval/exec/compile/dunder-mro/`__globals__`/
+`__import__`/globals/locals …) plus timeout and memory-bomb containment.
+
+**Honest limitation:** this is a hardened *subprocess*, not a kernel-level
+jail. It is a large step up from unsandboxed `exec`, but for untrusted
+multi-tenant input the brief's ephemeral Docker container (plus seccomp/
+gVisor and a network namespace) remains the right deployment.
 
 **3. Is the Critic an LLM recomputing math?** No — it is a **deterministic
 Python validation module** (`critic.py`), by design. LLMs cannot be trusted

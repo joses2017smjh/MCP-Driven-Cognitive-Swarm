@@ -58,6 +58,7 @@ class InProcessRunner:
 
     def __init__(self, disabled: set[str] | None = None) -> None:
         self.disabled = disabled or set()
+        from mcp_servers.code_server import server as code
         from mcp_servers.data_server import server as data
         from mcp_servers.ml_server import server as ml
         from mcp_servers.news_server import server as news
@@ -73,6 +74,8 @@ class InProcessRunner:
             ("ml-inference", "predict_match"): ml.run_predict,
             ("ml-inference", "explain_prediction"): ml.run_explain,
             ("ml-inference", "get_model_card"): lambda: dict(ml.get_bundle().card),
+            ("code-env", "run_python"): code.do_run,
+            ("code-env", "list_datasets"): lambda: code.list_datasets.fn(),
         }
 
     def call(self, server: str, tool: str, **args: Any) -> ToolCall:

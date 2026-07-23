@@ -280,6 +280,25 @@ Every source is a licensed free API or a licensed bulk download:
 
 Deliberately **not** used: FBref / Transfermarkt / ESPN scraping — fragile and ToS-restricted. (`soccerdata`, which scrapes FBref, is not on any active code path.)
 
+**Where named players stop, and why.** StatsBomb's *women's international*
+coverage is recent (WWC 2023, Women's Euro 2025), so those scorers/assists
+are named from real events. Its *men's club* coverage is historical — La Liga
+ends 2020/21, the Premier League has only 2003/04 and 2015/16, and MLS is
+6 matches — so the club-league pages stay at role level rather than naming
+players from squads that are five-plus years stale. Current club squads need
+a keyed provider (API-Football lineups + events, or StatsBomb's commercial
+feed).
+
+### Stateful code sandbox (MCP Server 4)
+
+`mcp_servers/code_server/` lets the agent answer questions no endpoint
+anticipates by *writing* Python against the real datasets — the capability an
+architecture review flagged as missing. Two enforcement layers (an AST
+allow-list that blocks dunder-attribute breakouts, plus a rlimited
+subprocess with sockets stubbed and a runtime-guarded `__import__`),
+deterministic cell-replay statefulness, and 18 escape attempts under test.
+Details and honest limits: [docs/SWARM.md](docs/SWARM.md).
+
 ### Agent evals (Phase B) — `evals/`
 
 **28-task golden set** across five categories (happy paths over many phrasings/teams, stakes-HITL, fault injection, prompt injection, unparseable), run in CI as a regression gate. Current results:

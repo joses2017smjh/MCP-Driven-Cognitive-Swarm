@@ -54,6 +54,14 @@ _REGISTRY: list[ToolSpec] = [
     ToolSpec("ml-inference", "get_model_card",
              frozenset({"model_card", "features", "metrics"}),
              "model version, features, eval metrics"),
+    # the stateful code environment: for questions no endpoint answers
+    ToolSpec("code-env", "run_python",
+             frozenset({"code", "analysis", "custom_query", "aggregation",
+                        "statistics"}),
+             "write and run sandboxed Python over the real datasets"),
+    ToolSpec("code-env", "list_datasets",
+             frozenset({"datasets", "schema"}),
+             "datasets available to the code environment"),
 ]
 
 
