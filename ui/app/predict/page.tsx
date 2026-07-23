@@ -7,7 +7,7 @@ export default function PredictPage() {
   return (
     <>
       <Nav />
-      <main className="flex-1 py-6">
+      <main className="min-w-0 flex-1 py-6">
         <div className="mb-4">
           <h1 className="text-xl font-bold tracking-tight">Ask the Agent</h1>
           <p className="mt-1 text-xs text-ink-400">

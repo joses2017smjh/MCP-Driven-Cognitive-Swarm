@@ -125,6 +125,43 @@ Render and Vercel, nothing in code.
 
 ---
 
+## Testing on a phone (Android / iOS)
+
+The UI is mobile-responsive — nav collapses to full-width tap targets, wide
+tables and the bracket tree scroll **inside their own panels** instead of
+dragging the page, and a web manifest lets Android "Add to home screen"
+install it standalone. Verified at 393 px (Pixel-class): every page reports
+`scrollWidth == viewport`, i.e. no page-level horizontal scroll.
+
+Three ways to get it onto the phone, best first:
+
+**1. Deploy it (works from anywhere, no same-network requirement).** Follow
+Option C above — Vercel gives you `https://<project>.vercel.app`, which you
+just open on the phone. This is the only option that works off campus / on
+mobile data, and it's why the deploy configs exist.
+
+**2. Same Wi-Fi as the machine running the UI.** Next's dev server already
+binds all interfaces and prints a `Network:` URL:
+
+```bash
+cd ui && GATEWAY_URL=http://localhost:8000 npm run dev
+#   Network: http://192.168.x.x:3000     <- open THIS on the phone
+```
+
+A useful property of the architecture: the browser only ever talks to the
+Next server, which proxies to the gateway server-side. So **the phone only
+needs to reach port 3000** — the gateway can stay on `localhost` and never be
+exposed. Note this must be a machine your phone can actually route to (a
+laptop on the same Wi-Fi); an HPC compute node's private `10.x` address
+usually is not reachable from a phone.
+
+**3. A quick tunnel** (`cloudflared tunnel --url http://localhost:3000` or
+ngrok) if you want a temporary public URL without deploying. Check your
+network policy first — many campus/HPC networks block outbound tunnels.
+
+VS Code's port forwarding only reaches the laptop running VS Code, not your
+phone, so it does not help here.
+
 ## Verify any deployment
 
 `scripts/smoke_test.sh` drives every capability against a running gateway:

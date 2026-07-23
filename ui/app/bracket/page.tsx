@@ -49,7 +49,7 @@ export default function BracketPage() {
   return (
     <>
       <Nav />
-      <main className="flex-1 py-6">
+      <main className="min-w-0 flex-1 py-6">
         <div className="mb-4">
           <h1 className="text-xl font-bold tracking-tight">
             Women&apos;s World Cup — bracket projection
@@ -92,8 +92,9 @@ export default function BracketPage() {
               </span>
             </div>
 
-            {/* the tree: one column per round */}
-            <div className="overflow-x-auto pb-2">
+            {/* the tree: one column per round. min-w-0 keeps the horizontal
+                scroll inside this box rather than on the whole page */}
+            <div className="min-w-0 overflow-x-auto pb-2">
               <div className="grid min-w-[56rem] grid-cols-4 gap-3">
                 {data.rounds.map((rnd) => (
                   <div key={rnd.round} className="flex flex-col">

@@ -11,13 +11,16 @@ export function Panel({
   children: ReactNode;
   className?: string;
 }) {
+  // min-w-0 lets a panel shrink below its content's intrinsic width, so any
+  // inner overflow-x-auto scrolls itself instead of stretching the page
+  // (grid/flex children default to min-width:auto).
   return (
-    <section className={`panel ${className}`}>
-      <header className="panel-header">
-        <h2>{title}</h2>
+    <section className={`panel min-w-0 ${className}`}>
+      <header className="panel-header gap-2">
+        <h2 className="truncate">{title}</h2>
         {right}
       </header>
-      <div className="p-4">{children}</div>
+      <div className="min-w-0 p-4">{children}</div>
     </section>
   );
 }

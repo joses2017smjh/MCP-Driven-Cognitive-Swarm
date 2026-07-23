@@ -55,7 +55,7 @@ export default function LeaguePage({ params }: { params: Promise<{ id: string }>
   return (
     <>
       <Nav />
-      <main className="flex-1 py-6">
+      <main className="min-w-0 flex-1 py-6">
         <Link href="/" className="text-2xs uppercase tracking-widest text-ink-600
           hover:text-ink-100">← all leagues</Link>
 

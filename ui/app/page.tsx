@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main className="flex-1 py-6">
+      <main className="min-w-0 flex-1 py-6">
         <div className="mb-6">
           <h1 className="text-xl font-bold tracking-tight">Leagues &amp; Tournaments</h1>
           <p className="mt-1 text-xs text-ink-400">
