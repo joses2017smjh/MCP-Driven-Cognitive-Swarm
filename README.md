@@ -289,6 +289,31 @@ players from squads that are five-plus years stale. Current club squads need
 a keyed provider (API-Football lineups + events, or StatsBomb's commercial
 feed).
 
+### Enabling live data (two optional keys)
+
+Everything above runs keyless. Two free keys unlock the remaining live layers;
+each provider degrades gracefully when its key is absent, so nothing breaks
+without them.
+
+```bash
+# never paste keys into a chat or commit them — .env is gitignored
+cp .env.example .env      # then edit, or just export in your shell:
+export ODDS_API_KEY=...        # the-odds-api.com    (500 credits/month)
+export API_FOOTBALL_KEY=...    # api-football.com    (~100 requests/day)
+```
+
+| Key | Unlocks | Cost |
+|---|---|---|
+| `ODDS_API_KEY` | Real upcoming fixtures **and live odds for every league** (incl. Liga MX, MLS), which also switches the market-comparison / EV layer from demo prices to real markets | 1 credit per league refresh; cached 6 h |
+| `API_FOOTBALL_KEY` | **Current** club squads → named scorers/assists on club league pages, plus confirmed lineups and injuries for the availability features | `python -m scripts.build_club_shares --season 2026` = 2 requests per league (22 for all 11) |
+
+Preview the cost of any run before spending anything:
+`python -m scripts.build_club_shares --season 2026 --dry-run`.
+
+Club shares merge into the same `data/artifacts/player_shares.json` the
+bracket and matchup projector already read, so **no downstream code changes** —
+club pages simply stop falling back to role-level players.
+
 ### Stateful code sandbox (MCP Server 4)
 
 `mcp_servers/code_server/` lets the agent answer questions no endpoint
